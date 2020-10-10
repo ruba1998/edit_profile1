@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/profile_picture"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.jgabrielfreitas.core.BlurImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/woman"
+
+            android:id="@+id/bluring_image"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#55000000">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@null"
+                app:navigationIcon="@drawable/left_arrow"
+                >
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:src="@drawable/woman"
+            android:layout_gravity="center"
+            />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/camera_icon"
+
+
+                android:src="@drawable/camera_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginLeft="95dp"
+
+                />
+        </FrameLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/profile_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+      >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:text="Name"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+           android:background="@drawable/rounded_corner"
+            android:padding="10dip"
+            android:textColor="@android:color/black"
+            android:text="Ruba Badawi"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_marginBottom="10dp"
+/>
+        <TextView
+            android:textColor="#999999"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:textSize="15sp"
+            android:text="Password"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dip"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:text="Ruba Badawi"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <TextView
+            android:textColor="#999999"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:textSize="15sp"
+            android:text="City"
+            android:textStyle="bold"
+            android:layout_marginRight="140dp"
+            />
+            <TextView
+                android:textColor="#999999"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:padding="5dip"
+                android:textSize="15sp"
+                android:text="Gender"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="117dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dip"
+            android:textColor="@android:color/black"
+            android:text="Nablus"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="63dp"/>
+
+        <TextView
+            android:layout_width="117dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:drawableRight="@drawable/right_arrow"
+            android:padding="10dip"
+            android:text="Female"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:text="E-mail for contact"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dip"
+            android:textColor="@android:color/black"
+            android:text="Ruba Badawi"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:text="Phone number"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dip"
+            android:textColor="@android:color/black"
+
+            android:text="+970597576210"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:text="Date of birth"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dip"
+            android:textColor="@android:color/black"
+
+            android:text="+970597576210"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:text="About me"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dip"
+            android:textColor="@android:color/black"
+            android:maxLength="40"
+            android:text="hjgjhjuh uhuhiu uihuhui ihuohihgkyughkhhgukhujhihihjnkihhjhiuioji0ojihoujiolkhihoijolk"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
